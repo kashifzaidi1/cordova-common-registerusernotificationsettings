@@ -44,21 +44,16 @@ NSString* const UIApplicationRegisterUserNotificationSettings = @"UIApplicationR
                           object:settings];
 }
 
-
-- (void)application:(UIApplication *) application handleActionWithIdentifier: (NSString *) identifier 
-forLocalNotification: (NSDictionary *) notification
-  completionHandler: (void (^)()) completionHandler {
-
-	NSDate *now = [NSDate date]; 
-	NSTimeInterval nowEpochSeconds = [now timeIntervalSince1970] * 1000; 
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification withResponseInfo:(NSDictionary *)responseInfo completionHandler:(void (^)())completionHandler{
+    NSDate *now = [NSDate date];
+    NSTimeInterval nowEpochSeconds = [now timeIntervalSince1970] * 1000;
     
-	NSString *script = [NSString stringWithFormat:@"window.notification_callback('%@',%f);", identifier, nowEpochSeconds]; 
-	[self.viewController.commandDelegate evalJs:script]; 
-     
-	// Must be called when finished 
-	completionHandler(); 
-} 
-
+    NSString *script = [NSString stringWithFormat:@"window.notification_callback('%@',%f);", identifier, nowEpochSeconds];
+    [self.viewController.commandDelegate evalJs:script];
+    
+    // Must be called when finished
+    completionHandler();
+}
 #endif
 
 @end

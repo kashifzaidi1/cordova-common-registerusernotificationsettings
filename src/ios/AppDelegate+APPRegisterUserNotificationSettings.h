@@ -33,8 +33,7 @@ extern NSString* const UIApplicationRegisterUserNotificationSettings;
 - (void)                    application:(UIApplication*)application
     didRegisterUserNotificationSettings:(UIUserNotificationSettings*)settings;
 
-- (void)application:(UIApplication *) application handleActionWithIdentifier: (NSString *) identifier
-        forLocalNotification: (NSDictionary *) notification;
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification withResponseInfo:(NSDictionary *)responseInfo completionHandler:(void (^)())completionHandler;
 #endif
 
 @end
