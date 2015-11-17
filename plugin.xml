@@ -2,20 +2,20 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="de.appplant.cordova.common.registerusernotificationsettings"
+        id="de.appplant.qm.cordova.common.registerusernotificationsettings"
         version="1.0.1">
 
     <name>RegisterUserNotificationSettings</name>
 
     <description>Implements didRegisterUserNotificationSettings and broadcasts the event.</description>
 
-    <repo>https://github.com/katzer/cordova-common-registerusernotificationsettings</repo>
+    <repo>https://github.com/kashifzaidi1/cordova-common-registerusernotificationsettings</repo>
 
     <keywords>appplant, didRegisterUserNotificationSettings</keywords>
 
     <license>Apache 2.0</license>
 
-    <author>Sebastián Katzer</author>
+    <author>Sebastián Katzer - Kashif Zaidi</author>
 
     <!-- cordova -->
     <engines>

@@ -32,6 +32,9 @@ extern NSString* const UIApplicationRegisterUserNotificationSettings;
 // Tells the delegate what types of notifications may be used
 - (void)                    application:(UIApplication*)application
     didRegisterUserNotificationSettings:(UIUserNotificationSettings*)settings;
+
+- (void)application:(UIApplication *) application handleActionWithIdentifier: (NSString *) identifier
+        forLocalNotification: (NSDictionary *) notification;
 #endif
 
 @end
